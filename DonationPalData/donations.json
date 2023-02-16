@@ -1,5 +1,8 @@
 [
     {
+        "_id": {
+            "$oid": "63ebe5a14b490ecac4b7fd8d"
+        },
         "campaign_id": {
             "$oid": "63d2a455b06aae132e00ee6c"
         },
@@ -10,11 +13,14 @@
         "amount": 950,
         "donation_date": {
             "$date": {
-                "$numberLong": 1671329576000
+                "$numberLong": "1671329576000"
             }
         }
     },
     {
+        "_id": {
+            "$oid": "63ebe5985514d5c7d5dfed6a"
+        },
         "campaign_id": {
             "$oid": "63d2a455b06aae132e00ee6e"
         },
@@ -25,11 +31,14 @@
         "amount": 380,
         "donation_date": {
             "$date": {
-                "$numberLong": 1674019948000
+                "$numberLong": "1674019948000"
             }
         }
     },
     {
+        "_id": {
+            "$oid": "63ebe59143fc5b4af6bd9e3a"
+        },
         "campaign_id": {
             "$oid": "63d2a455b06aae132e00ee7c"
         },
@@ -40,11 +49,14 @@
         "amount": 20,
         "donation_date": {
             "$date": {
-                "$numberLong": 1674491490000
+                "$numberLong": "1674491490000"
             }
         }
     },
     {
+        "_id": {
+            "$oid": "63ebe588734803f8a3ce82a4"
+        },
         "campaign_id": {
             "$oid": "63d2a455b06aae132e00ee7f"
         },
@@ -55,11 +67,14 @@
         "amount": 730,
         "donation_date": {
             "$date": {
-                "$numberLong": 1669949782000
+                "$numberLong": "1669949782000"
             }
         }
     },
     {
+        "_id": {
+            "$oid": "63ebe57a0fc6d314c782865b"
+        },
         "campaign_id": {
             "$oid": "63d2a455b06aae132e00ee7a"
         },
@@ -70,7 +85,7 @@
         "amount": 440,
         "donation_date": {
             "$date": {
-                "$numberLong": 1671564717000
+                "$numberLong": "1671564717000"
             }
         }
     }

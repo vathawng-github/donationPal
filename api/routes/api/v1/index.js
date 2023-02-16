@@ -32,6 +32,16 @@ router.get('/campaigns', async (req, res) => {
     res.json(campaigns);
 });
 
+router.get('/campaigns/:_id', async (req, res, next) => {
+    // Using Mongoose
+    // The "_id" is in req.params.id
+    const paramInputID = req.params._id;
+    const requestedCampaign = await Campaign.findById(paramInputID);
+    console.log(paramInputID);
+    res.json(requestedCampaign);
+    console.log(requestedCampaign);
+});
+
 router.get('/users', async (req, res) => {
     // Using Mongoose
     const filter = {};
