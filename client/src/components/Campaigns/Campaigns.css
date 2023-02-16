@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap');
+
+/* body {
+    display: flex;
+} */
+
+.Campaigns-wrapper {
+    font-family: "Syne", sans-serif;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin: 10px 40px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.Campaign-card {
+    width: 330px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.30);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal {
+    color: red;
+    font-size: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(243, 111, 111);
+    padding: 5px;
+}
+
+button a {
+    color: white;
+}
