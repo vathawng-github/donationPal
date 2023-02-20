@@ -1,11 +1,15 @@
 // import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
 import Campaigns from 'src/components/Campaigns/Campaigns';
 import Header from 'src/components/Header/Header';
 import Splash from 'src/components/Splash/Splash';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 import splashImg from 'src/assets/images/heart.jpeg';
+import AllCampaigns from './components/Campaigns/AllCampaigns';
 
 function App() {
   let apiURL = '';
@@ -20,11 +24,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        {/* <Routes>
-          <Route path = '/' element={<Board apiUrl = {apiUrl} />} />
-          <Route path = '/' element={<AllCampaigns apiUrl = {apiUrl} />} />
-        </Routes> */}
-        <Splash Logo = {splashImg}/>
+         <Routes>
+          <Route path = '/' element={<Splash Logo = {splashImg}/>} />
+          <Route path = '/Campaigns' element={<Campaigns apiURL={apiURL} />}/>
+          <Route path="/Campaigns/:_id" element={<AllCampaigns apiURL={apiURL} />}/>;
+        </Routes>
         <Campaigns />
       </BrowserRouter>
     </div>
