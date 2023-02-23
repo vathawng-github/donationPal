@@ -9,7 +9,7 @@ function Splash( {Logo}) {
         </div>
         <div className='divider'></div>
         <div>
-            <h2 class = "bigger">Campaigns</h2>
+            <h2 className = "bigger">Campaigns</h2>
         </div></>
     )
 }

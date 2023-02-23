@@ -1,18 +1,17 @@
-import 'src/components/Campaigns/Campaigns.css';
+import 'src/components/Campaign/Campaign.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function Campaigns( {name, goal, description, start_date, end_date, _id}){
+function Campaign( {name, goal, description, start_date, end_date, _id}){
     return(
         <>
         {/* <div className='Campaigns-wrapper'>
             <h3 class = "name">{name}</h3>
             <p class = "goal">{goal}</p>    
         </div> */}
-        <div className='Campaigns-wrapper'>
-            <div class = "Campaign-card">
-                <h3 class="name">{name}</h3>
-                <div class = "bottom">
-                     <h4 class="goal">Goal: {goal}</h4>
+            <div className = "Campaign-card">
+                <h3 className="name">{name}</h3>    
+                <div className = "bottom">
+                     <h4 className="goal">Goal: {goal}</h4>
                     <button><a href={`/Campaigns/${_id}`}>More ></a></button>
                 </div>
             </div>
@@ -72,9 +71,8 @@ function Campaigns( {name, goal, description, start_date, end_date, _id}){
                     <button><a href="`/Campaigns/${_id}`">More ></a></button>
                 </div>
             </div>   */}
-        </div>
         </>
     )
 }
 
-export default Campaigns;
+export default Campaign;
