@@ -17,7 +17,7 @@ function Header() {
             <nav>
                 <h4><a href= "#">Home</a></h4>
                 <h4><a href= "#">Campaigns</a></h4>
-                <h4 className = "red"><a href= "#">Donate</a></h4>
+                <h4 className = "red"><a href= "#">Join</a></h4>
             </nav>
         </div>
     )

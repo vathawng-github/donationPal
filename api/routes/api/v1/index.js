@@ -50,4 +50,5 @@ router.get('/users', async (req, res) => {
     res.json(users);
 });
 
+
 module.exports = router;
