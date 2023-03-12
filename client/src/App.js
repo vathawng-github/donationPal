@@ -1,14 +1,18 @@
 // import logo from './logo.svg';
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import './App.css';
 import Campaigns from 'src/pages/Campaigns/Campaigns';
 import Header from 'src/components/Header/Header';
-import Splash from 'src/components/Splash/Splash';
+import Home from 'src/pages/Home/Home';
+import LoginPage from 'src/pages/LoginPage/LoginPage';
+import ProfilePage from './pages/ProfilePage/ProfilePage';
+import PageLayout from './pages/PageLayout/PageLayout';
+import DetailFetch from './components/Detail/DetailFetch';
 
 
-import splashImg from 'src/assets/images/heart.jpeg';
+
 
 function App() {
   let apiURL = '';
@@ -21,15 +25,16 @@ function App() {
   
   return (
     <div className="App">
-      <BrowserRouter>
-        <Header />
-         <Routes>
-          <Route path = '/' element={<Splash Logo = {splashImg}/>} />
-          <Route path = '/Campaigns' element={<Campaigns apiURL={apiURL} />}/>
-          {/* <Route path="/Campaigns/:_id" element={<Campaigns apiURL={apiURL} />}/>; */}
+        <Routes>
+          <Route path = '/' element={<><Header /><PageLayout /></>}>
+            <Route index element= {<LoginPage />} />
+            <Route path = "Profile" element = {<ProfilePage />} />
+          </Route>
+          <Route path = '/Home' element={<Home />} />
+          <Route path = '/Campaigns' element={<><Header /><Campaigns apiURL={apiURL} /></>}/>
+          <Route path="/LoginPage" element={<><Header /><LoginPage /></>} />
+          <Route path="/Details/:_id" element = {<><Header /><DetailFetch /></>} />
         </Routes>
-        <Campaigns />
-      </BrowserRouter>
     </div>
   );
 }

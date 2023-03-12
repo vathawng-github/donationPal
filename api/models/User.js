@@ -1,75 +1,27 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
 const Schema = mongoose.Schema;
+const { ObjectId, Int32 } = require('mongodb');
+
 
 
 // Create Schema
 const UserSchema = new Schema ({
+    _id: {
+        type: ObjectId,
+        required: true
+    },
     gender: {
         type: String,
         required: true
     },
     name: {
-        title: {
-            type: String,
-            required: true
-        },
-        first: {
-            type: String,
-            required: true
-        },
-        last: {
-            type: String,
-            required: true
-        },
+        type: Object,
+        required: true
     },
     location: {
-        street: {
-            number: {
-                type: Number,
-                required: true
-            },
-            name: {
-                type: String,
-                required: true
-            }   
-        },
-        city: {
-            type: String,
-            required: true
-        },
-        state: {
-            type: String,
-            required: true
-        },
-        country: {
-            type: String,
-            required: true
-        },
-        postcode: {
-            type: Number,
-            required: true
-        },
-        coordinated: {
-            latitude: {
-                type: String,
-                required: true
-            },
-            longitude: {
-                type: String,
-                required: true
-            }
-        },
-        timezone: {
-            offset: {
-                type: String,
-                required: true,
-            },
-            description: {
-                type: String,
-                required: true
-            }
-        },
+        type: Object,
+        required: true
     },
     email: {
         type: String,
@@ -77,18 +29,12 @@ const UserSchema = new Schema ({
         unique: true
     },
     password: {
-        type: String,
+        type: String, 
         required: true
     },
     dob: {
-        date: {
-            type: String,
-            required: true
-        },
-        age: {
-            type: Number,
-            required: true
-        }
+        type: Object,
+        required: true
     },
     phone: {
         type: String,
@@ -98,29 +44,13 @@ const UserSchema = new Schema ({
         type: String,
         required: true
     },
-    user_id: {
-        name: {
-            type: String,
-            required: true
-        },
-        value: {
-            type: String,
-            required: true
-        }
+    id: {
+        type: Object,
+        required: true
     },
     picture: {
-        large: {
-            type: String,
-            required: true
-        },
-        medium: {
-            type: String,
-            required: true
-        },
-        thumbnail: {
-            type: String,
-            required: true
-        }
+        type: Object,
+        required: true
     },
     nat: {
         type: String,

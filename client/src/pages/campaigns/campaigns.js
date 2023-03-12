@@ -1,4 +1,4 @@
-import { useState, useEffect, useParams } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Campaign from 'src/components/Campaign/Campaign';
 import './Campaigns.css';
@@ -19,8 +19,8 @@ useEffect( () => {
             setCampaigns((dataCampaigns) => [...apiResponse.data]);
 
         }
-        catch (error) {
-            console.log("Error :(");
+        catch (err) {
+            console.log(err);
         }
         finally {
             setIsLoading(false);
@@ -36,20 +36,29 @@ return  (
     <div>
         <div>
             {isLoading ? 
-                (<span className='loading'><div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></span>)
+                (<span className='loading'>
+                    <div className="lds-roller">
+                    </div>
+                </span>)
                 : (
-                <div className = "Campaigns-wrapper">
-                    {dataCampaigns.map((c) => (
-                        <Campaign 
-                            key={c._id}
-                            name={c.name}
-                            goal={c.goal}
-                            desc={c.description}
-                            start_date={c.start_date}
-                            end_date={c.end_date}
-                        />
-                        ))} 
-                </div>
+                <>
+                    <div>
+                        <h1 id = "heading"> Our Campaigns</h1>
+                    </div>
+                    <div className = "Campaigns-wrapper">
+                        {dataCampaigns.map((c) => (
+                            <Campaign 
+                                key={c._id}
+                                id={c._id}
+                                name={c.name}
+                                goal={c.goal}
+                                desc={c.description}
+                                start_date={c.start_date}
+                                end_date={c.end_date}
+                            />
+                            ))} 
+                    </div>  
+                </>
             )}
         </div>
     </div>

@@ -15,9 +15,9 @@ function Header() {
                 </RouterLink>
             </nav> */}
             <nav>
-                <h4><a href= "#">Home</a></h4>
-                <h4><a href= "#">Campaigns</a></h4>
-                <h4 className = "red"><a href= "#">Join</a></h4>
+                <h4><a href= {`/Home`}>Home</a></h4>
+                <h4><a href= {`/Campaigns`}>Campaigns</a></h4>
+                <h4 className = "red"><a href= {"/LoginPage"}>Join</a></h4>
             </nav>
         </div>
     )

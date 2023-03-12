@@ -1,11 +1,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const { ObjectId, Int32 } = require('mongodb');
+
 
 
 // Create Schema
 const CampaignSchema = new Schema ({
+    _id: {
+        type: ObjectId,
+        required: true
+    },
     campaign_id: {
-        type: Number,
+        type: ObjectId,
+        required: true
+    },
+    user_id: {
+        type: ObjectId,
         required: true
     },
     name: {
