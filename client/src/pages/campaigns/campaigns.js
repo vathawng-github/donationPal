@@ -13,7 +13,7 @@ useEffect( () => {
     const loadCampaigns = async () => {
         try {
             // const apiResponse = await axios.get(apiURL + '/campaign/')
-            const apiResponse = await axios.get('http://localhost:8080/api/v1/campaigns/');
+            const apiResponse = await axios.get(apiURL + '/campaigns/');
             // await console.log(apiResponse.data);
             await console.log(apiResponse.data);                        
             setCampaigns((dataCampaigns) => [...apiResponse.data]);

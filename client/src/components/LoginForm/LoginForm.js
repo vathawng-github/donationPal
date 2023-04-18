@@ -65,7 +65,7 @@ export default function LoginForm () {
 
 
     return (
-        <form method = "post" onSubmit = {handleSubmit}>
+        <form method = "post" onSubmit = {handleSubmit} id = "login-form">
             <label>Email:
                 <br></br> 
                 <input 

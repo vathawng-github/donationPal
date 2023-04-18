@@ -11,7 +11,7 @@ import Profile from "src/components/Profile/Profile";
 // import "./ProfilePage.css";
 
 
-function ProfilePage() {
+function ProfilePage( {apiURL} ) {
     // const { _id } = useParams();
     const [Loading, setIsLoading] = useState(false);
     const { token, setToken} = useToken();
@@ -37,7 +37,7 @@ function ProfilePage() {
     useEffect( () => { 
         const loadUser = async () => { 
             try { 
-                const apiResponse = await axios.get('http://localhost:8080/api/v1/users/63d29f6cb06aae132e00ee3c') 
+                const apiResponse = await axios.get(apiURL + '/users/63d29f6cb06aae132e00ee3c') 
                 // await console.log(apiResponse.data); 
                 await console.log(apiResponse.data);                         
                 setUser((dataUser) => [apiResponse.data]); 
@@ -52,7 +52,7 @@ function ProfilePage() {
         // set isload to true 
         setIsLoading(true); 
         loadUser(); 
-    }, []);
+    }, []);
 
     const logOut = (event) => {
        localStorage.removeItem("accessToken");

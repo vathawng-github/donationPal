@@ -10,6 +10,7 @@ import LoginPage from 'src/pages/LoginPage/LoginPage';
 import ProfilePage from './pages/ProfilePage/ProfilePage';
 import PageLayout from './pages/PageLayout/PageLayout';
 import DetailFetch from './components/Detail/DetailFetch';
+import DonationSuccess from './pages/DonationSuccess/DonationSuccess';
 
 
 
@@ -26,14 +27,15 @@ function App() {
   return (
     <div className="App">
         <Routes>
-          <Route path = '/' element={<><Header /><PageLayout /></>}>
-            <Route index element= {<LoginPage />} />
-            <Route path = "Profile" element = {<ProfilePage />} />
+          <Route path = '/' element={<><Header /><PageLayout apiURL={apiURL}/></>}>
+            <Route index element= {<LoginPage apiURL={apiURL}/>} />
+            <Route path = "Profile" element = {<ProfilePage apiURL={apiURL}/>} />
           </Route>
-          <Route path = '/Home' element={<Home />} />
+          <Route path = '/Home' element={<Home apiURL={apiURL}/>} />
           <Route path = '/Campaigns' element={<><Header /><Campaigns apiURL={apiURL} /></>}/>
-          <Route path="/LoginPage" element={<><Header /><LoginPage /></>} />
-          <Route path="/Details/:_id" element = {<><Header /><DetailFetch /></>} />
+          <Route path="/LoginPage" element={<><Header /><LoginPage apiURL={apiURL}/></>} />
+          <Route path="/Details/:_id" element = {<><Header /><DetailFetch apiURL={apiURL}/></>} />
+          <Route path = "/donations/donation_success/" element = {<DonationSuccess />} />
         </Routes>
     </div>
   );
