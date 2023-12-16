@@ -29,7 +29,7 @@ function DonationSuccess() {
     return (
         <div className='success'>
             <h1 className='green'>Donation Success!</h1> 
-            <h3>You donated ${donationAmount} to the Campaign "<strong>{campaign.name}"</strong></h3>
+            <h3>You donated ${donationAmount} to the Campaign <strong>"{campaign.name}"</strong></h3>
         </div>
     )
 }

@@ -31,6 +31,10 @@ router.get('/donations', async (req, res) => {
 // Helper function to get prod/dev client/api url
 const getURL = (app) => {
     if (process.env.NODE_ENV === 'production'){
+        console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+        console.log(`CLIENT_URL: ${process.env.PROD_CLIENT_URL}`);
+        console.log(`API_URL: ${process.env.PROD_API_URL}`);
+        
         if (app === 'client'){
             return process.env.PROD_CLIENT_URL;
         } else {

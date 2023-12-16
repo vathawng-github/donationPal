@@ -14,13 +14,15 @@ function DetailFetch() {
 
     // Get the API URL from the context
     const APIURL = useContext(APIURLContext);
+    console.log(APIURL);
 
     const { _id } = useParams();
     const [details, setDetails] = useState([]);
-    const [donation] = useDonationFetch(`http://localhost:8080/api/v1/donations/campaigns/${_id}`);
+    const [donation] = useDonationFetch(`${APIURL}/donations/campaigns/${_id}`);
+
 
     useEffect(() => {
-        axios.get(`http://localhost:8080/api/v1/campaigns/${_id}`)
+        axios.get(`${APIURL}/campaigns/${_id}`)
             .then(res => {
                 console.log(res);
                 setDetails(res.data);
